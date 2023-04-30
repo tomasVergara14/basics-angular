@@ -25,4 +25,11 @@ export class HeroComponent {
   changeHeroAge(): number{
     return this.age = 35;
   }
+
+  onResetForm():void{
+    
+    this.name = 'Ironman';
+    this.age = 40; 
+
+  }
 }

@@ -13,9 +13,13 @@
     <dd>{{ capitalizeName }}</dd>
 </dl>
 
-<button class="m-2" (click)="changeHeroName()">
+<button class="m-2" (click)="changeHeroName()" *ngIf="name !== 'spiderman'">
     Change name
 </button>
-<button class="m-2" (click)="changeHeroAge()">
+<button class="m-2" (click)="changeHeroAge()"  *ngIf="age !== 35">
     Change age
+</button>
+<hr>
+<button (click)="onResetForm()">
+    Reset
 </button>
