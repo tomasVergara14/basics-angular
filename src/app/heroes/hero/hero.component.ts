@@ -10,4 +10,19 @@ export class HeroComponent {
   public name: string = 'Ironman';
   public age: number = 40; 
 
+  get capitalizeName(): string{
+    return this.name.toUpperCase();
+  }
+
+  getDescription(): string{
+    return ` ${this.name} - ${this.age}  `;
+  }
+
+  changeHeroName():string{
+    return this.name = 'spiderman';
+  }
+
+  changeHeroAge(): number{
+    return this.age = 35;
+  }
 }
