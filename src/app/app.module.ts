@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CounterModule } from './counter/counter.module'; 
 import { HerosModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
 //Components
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CounterModule,
     HerosModule,
+    DbzModule,
     AppRoutingModule
   ],
   providers: [],
