@@ -1,8 +1,9 @@
 
 <div class="col">
     <h4>List</h4>
-    <ul class="list-group">
-        <li class="list-group-item">Krillin - 500</li>
-        <li class="list-group-item">Goku - 10000</li>
+    <ul class="list-group" *ngFor="let character of characterList">
+        <li class="list-group-item">
+            <span> {{ character.name }} - {{ character.power }} </span>
+        </li>
     </ul>
 </div>
