@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DbzAddComponent } from './components/dbzAddCharacters/dbz-add.component';
 import { DbzListComponent } from './components/dbzlist/dbzlist.component';
 import { DbzMainPageComponent } from './pages/main-page-component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { DbzMainPageComponent } from './pages/main-page-component';
     DbzMainPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class DbzModule { }
