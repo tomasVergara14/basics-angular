@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Character } from "../interfaces/character.interface";
+import { DbzService } from "../services/dbz.service";
 
 @Component({
     selector:'app-dbz-main-page',
@@ -8,26 +9,13 @@ import { Character } from "../interfaces/character.interface";
 })
 
 export class DbzMainPageComponent implements OnInit{
-
-    public characters: Character[] = [
-        {
-            name: 'Goku',
-            power: 9500,
-        },
-        {
-            name: 'Krilin',
-            power: 1500,
-        },
-        {
-            name: 'Trunks',
-            power: 6500,
-        }
-    ]
-
-    onNewCharacter( character: Character ):void{
-        this.characters.push(character)
-    }
     
+    constructor(
+        public dbzService: DbzService,
+    ){
+        
+    }
+
     ngOnInit(): void {
         console.log('its implemented')
     }
