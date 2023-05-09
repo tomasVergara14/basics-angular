@@ -2,9 +2,12 @@
 <div class="col">
     <h4>List</h4>
     <ul class="list-group" *ngFor="let character of characterList; let i = index; let isEven = even" [ngClass]="{ 'list-group-item-success' : isEven }" >
-        <li class="list-group-item">
-            <span class="text-success"> {{ i + 1 }}- </span>
-            <span> {{ character.name }} - {{ character.power }} </span>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="">
+                <span class="text-success"> {{ i + 1 }}- </span>
+                <span> {{ character.name }} - {{ character.power }} </span>
+            </div>
+            <button class="btn btn-danger" (click)="onDeleteCharacter(i)" >X</button>
         </li>
     </ul>
 </div>

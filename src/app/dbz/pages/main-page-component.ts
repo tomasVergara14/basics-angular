@@ -25,8 +25,7 @@ export class DbzMainPageComponent implements OnInit{
     ]
 
     onNewCharacter( character: Character ):void{
-        console.log('testing')
-        console.log(character)
+        this.characters.push(character)
     }
     
     ngOnInit(): void {

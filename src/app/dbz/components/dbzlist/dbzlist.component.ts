@@ -8,4 +8,9 @@ import { Character } from "../../interfaces/character.interface";
 })
 export class DbzListComponent{
     @Input() public characterList :Character[] = []
+
+    onDeleteCharacter( index: number):void{
+        console.log(index);
+    }
+
 }
