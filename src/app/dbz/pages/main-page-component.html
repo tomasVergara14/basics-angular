@@ -6,6 +6,6 @@
         <app-dbzlist-component [characterList]="characters" ></app-dbzlist-component>
     </div>
     <div class="col">
-        <app-dbz-add-component></app-dbz-add-component>
+        <app-dbz-add-component (onNewCharacter)="onNewCharacter($event)" ></app-dbz-add-component>
     </div>
 </div>

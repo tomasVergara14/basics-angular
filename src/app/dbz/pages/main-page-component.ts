@@ -23,6 +23,11 @@ export class DbzMainPageComponent implements OnInit{
             power: 6500,
         }
     ]
+
+    onNewCharacter( character: Character ):void{
+        console.log('testing')
+        console.log(character)
+    }
     
     ngOnInit(): void {
         console.log('its implemented')
