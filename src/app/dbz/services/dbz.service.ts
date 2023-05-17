@@ -34,10 +34,13 @@ export class DbzService{
         this.characters.push(newCharacter)
     }
 
-    onDeletedId(id:number){
-        this.characters.splice(id,1)
-    }
+    // onDeletedId(id:number){
+    //     this.characters.splice(id,1)
+    // }
     
+    deleteCharacterById(id: string){
+        this.characters = this.characters.filter(character => character.id !== id)
+    }
 
 
 }
