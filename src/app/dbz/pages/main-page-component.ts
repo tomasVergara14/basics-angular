@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Character } from "../interfaces/character.interface";
 import { DbzService } from "../services/dbz.service";
 
@@ -8,16 +8,23 @@ import { DbzService } from "../services/dbz.service";
     styleUrls:['main-page-component.scss']
 })
 
-export class DbzMainPageComponent implements OnInit{
+export class DbzMainPageComponent{
     
     constructor(
-        public dbzService: DbzService,
-    ){
-        
+        private dbzService: DbzService,
+    ){}
+
+    get characters():Character[] {
+        return [...this.dbzService.characters]
     }
 
-    ngOnInit(): void {
-        console.log('its implemented')
+    onDeleteCharacters(id: string):void {
+        this.dbzService.deleteCharacterById(id)
     }
+
+    onNewCharacter(character: Character):void{
+        this.dbzService.onNewCharacter(character)
+    }
+
 
 }
